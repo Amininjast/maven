@@ -14,4 +14,19 @@ public class CalculatorTest {
         int result = underTest.add(number1, number2);
         assertEquals(30, result);
     }
+
+    @Test
+    void canHandleWhenInputInZero() {
+        Calculator underTest = new Calculator();
+        int result = underTest.add(0);
+        assertEquals(0, result);
+    }
+
+    @Test
+    void canAddNumbersFromAGivenArray() {
+        Calculator underTest = new Calculator();
+        int[] numbers = {1, 5, 3};
+        int result = underTest.add(numbers);
+        assertEquals(9, result);
+    }
 }
